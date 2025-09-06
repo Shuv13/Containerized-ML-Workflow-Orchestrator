@@ -9,7 +9,7 @@ The pipeline automates steps like data ingestion, preprocessing, model training,
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/](https://github.com/)<your-username>/<your-repo>.git
+    git clone https://github.com/Shuv13/Containerized-ML-Workflow-Orchestrator.git
     cd ML
     ```
 
@@ -68,3 +68,14 @@ The pipeline automates steps like data ingestion, preprocessing, model training,
 To stop all running services:
 ```bash
 docker compose down
+```
+
+## 📌 Notes
+
+* The project uses PostgreSQL as a backend database for Airflow and for experiment tracking.
+* The container may install extra libraries (like scikit-learn) when starting. This is fine for development but not recommended for production.
+* For production usage, you should build a custom Docker image with all dependencies baked in. See Airflow’s docs.
+
+## 📚 References
+
+* Apache Airflow Documentation
